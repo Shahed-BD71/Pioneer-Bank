@@ -28,11 +28,14 @@ const depositNumber = getInputNumber('depositAmount');
     // const totalBalance = depositNumber + currentBalanceNumber;
     // document.getElementById('currentBalance').innerText = totalBalance;
 
-
+    if (depositNumber < 0){
+        alert("You can't Enter a negative Value");
+    }
+    else{
     updateSpanText('currentDeposit', depositNumber);
     updateSpanText('currentBalance', depositNumber);
-
     document.getElementById('depositAmount').value = ""
+    }
 })
 
 // Withdraw button event handler.
