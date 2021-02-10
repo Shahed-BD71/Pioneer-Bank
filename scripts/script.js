@@ -42,14 +42,17 @@ const depositNumber = getInputNumber('depositAmount');
 const withdrawBtn = document.getElementById('addWithdraw');
 withdrawBtn.addEventListener('click', function(){
     const withdrawNumber = getInputNumber('withdrawAmount');
+    if(withdrawNumber < 0){
+        alert("You can't Enter a negative Value")
+    }
+    else{
     updateSpanText('currentWithdraw', withdrawNumber);
     updateSpanText('currentBalance', -1*withdrawNumber);
 
     document.getElementById('withdrawAmount').value = ""
-
+    }
 // const withdrawAmount = document.getElementById('withdrawAmount').value;
     // const WithdrawNumber = parseFloat(withdrawAmount);
-
 })
 
 function getInputNumber(id){
