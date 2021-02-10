@@ -43,7 +43,7 @@ const withdrawBtn = document.getElementById('addWithdraw');
 withdrawBtn.addEventListener('click', function(){
     const withdrawNumber = getInputNumber('withdrawAmount');
     if(withdrawNumber < 0){
-        alert("You can't Enter a negative Value")
+        alert("You can't Enter a negative Value");
     }
     else{
     updateSpanText('currentWithdraw', withdrawNumber);
